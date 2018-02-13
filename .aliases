@@ -1,0 +1,12 @@
+alias emulator='$ANDROID_HOME/tools/emulator'
+alias android-emulator='emulator -avd default'
+alias android-log='adb logcat ReactNativeJS:D *:E'
+alias adbr="adb reverse tcp:8081 tcp:8081"
+alias be="bundle exec"
+alias flush-branches="git branch --merged master | grep -v master | xargs git branch -d && git remote prune origin"
+alias jobs="env TERM_CHILD=1 bundle exec rake resque:work COUNT=1 QUEUE=*"
+alias rs="(cdsrv && bundle exec rails s -b 0.0.0.0)"
+alias rc="(cdsrv && bundle exec rails c)"
+alias rtags="ctags --sort=0 -R . \$(bundle list --paths)"
+alias v1='(cdsrv && rake ab:set[redesign,v1])'
+alias v2='(cdsrv && rake ab:set[redesign,v2])'
